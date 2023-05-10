@@ -1,0 +1,30 @@
+.about {
+
+    background-image: linear-gradient(
+        to bottom,
+        lighten($primary, 5),
+        $primary,
+        lighten($secondary, 10),
+        $secondary,
+        darken($secondary, 10),
+        darken($secondary, 30)
+    );
+
+    color: $tertiary;
+
+    * {
+        margin: 0;
+    }
+
+    h4 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    p {
+        text-align: justify;
+        padding: 1rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+}

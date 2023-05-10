@@ -1,0 +1,84 @@
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        "main-content main-content video"
+        "full full full";
+
+    background-image: linear-gradient(
+        to bottom,
+        lighten($primary, 5),
+        $white,
+        $white,
+        $white,
+        lighten($primary, 5)
+    );
+    
+    padding: 5rem 2rem;
+    
+    * {
+        margin: 0;
+    }
+
+    p {
+        margin: 1rem 0;
+        text-align: justify;
+    }
+
+    video {
+        aspect-ratio: 5/3;
+        width: 30rem;
+        object-fit: fill;
+
+        border-radius: 1rem;
+        box-shadow:
+            rgba(17, 17, 26, 0.1) 0px 1px 0px,
+            rgba(17, 17, 26, 0.1) 0px 8px 24px,
+            rgba(17, 17, 26, 0.1) 0px 16px 48px;
+        filter: blur(3px);
+
+        transition: $transition;
+        transition-property: box-shadow, filter;
+
+        &:hover {
+            box-shadow:
+                rgba(17, 17, 26, 0.1) 0px 1px 0px,
+                rgba(17, 17, 26, 0.1) 0px 8px 24px,
+                rgba(17, 17, 26, 0.1) 0px 16px 48px,
+                transparentize($tertiary, 0.85) 0 0 0 6px;
+
+            filter: none;
+        }
+    }
+
+    .main-content {
+        grid-area: main-content;
+    }
+
+    .video {
+        grid-area: video;
+    }
+
+    .full {
+        width: 100%;
+        
+        text-align: center;
+        vertical-align: middle;
+        grid-area: full;
+    }
+
+    a {
+        color: $primary;
+        text-decoration: none;
+
+        transition: color $transition;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}

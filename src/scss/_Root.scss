@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$h1-size: 3rem;
+$h2-size: 2.65rem;
+$h3-size: 2.35rem;
+$h4-size: 2rem;
+$h5-size: 1.65rem;
+$h6-size: 1.35rem;
+$p-size: 1.05rem;
+
+$primary: #d8b990;
+$secondary: darken($primary, 20);
+$tertiary: #462e03;
+
+$white: #ecf0f1;
+$pure-white: #fff;
+$black: #2d3436;
+
+$font: "Montserrat", Helvetica, sans-serif;
+
+$transition: 0.26s ease-in-out;
+
+@mixin container() {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin fa() {
+    color: $tertiary;
+    padding: 0 1rem 0 0;
+}
+
+html, body {
+    @include container();
+
+    background-color: $white;
+    color: $black;
+
+    font-size: $p-size;
+    font-family: $font;
+
+    overflow-x: hidden;
+}
+
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.primary {
+    color: $primary !important;
+} .secondary {
+    color: $secondary !important;
+} .tertiary {
+    color: $tertiary !important
+}
+
+.fa-clipboard-question { @include fa(); }
